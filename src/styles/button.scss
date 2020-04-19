@@ -1,0 +1,17 @@
+.button {
+  width: 56px;
+  height: 56px;
+  background: radial-gradient(315.18% 315.18% at -124.11% -101.79%, #B9CCE2 11.1%, #FFFFFF 85.21%), #E3EDF7;
+  box-shadow: 4px 2px 16px rgba(136, 165, 191, 0.38), -4px -2px 16px rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  border: none;
+
+  &__icon {
+    background-image: url('../icons/default-button-icon.svg');
+  }
+
+  &:active {
+    background: #E3EDF7;
+    box-shadow: inset 4px 4px 12px rgba(136, 165, 191, 0.4), inset -4px -4px 16px rgba(255, 255, 255, 0.8);
+  }
+}
