@@ -3,37 +3,21 @@ import '../styles/button.scss';
 import defaultButtonIcon from '../icons/default-button-icon.svg';
 import pressedButtonIcon from '../icons/pressed-button-icon.svg';
 
-class Button extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      isPressed: false
-    };
-  }
-
-  handleClick () {
-    this.setState(state => ({
-      isPressed: !state.isPressed
-    }));
-  }
-
-  render () {
-    return (
-      <button
-        className="button"
-        onClick={ e => this.handleClick(e) }
-      >
-        <img
-          className="button-icon"
-          alt="GO"
-          src={
-            this.state.isPressed ? pressedButtonIcon : defaultButtonIcon
-          }
-        />
-      </button>
-    );
-  }
-
+export default function Button () {
+  return (
+    <button
+      className="button"
+    >
+      <img
+        className="button__icon--pressed"
+        alt="GO"
+        src={pressedButtonIcon}
+      />
+      <img
+        className="button__icon--nonpressed"
+        alt="GO"
+        src={defaultButtonIcon}
+      />
+    </button>
+  );
 }
-
-export default Button;

@@ -6,12 +6,24 @@
   border-radius: 16px;
   border: none;
 
-  &__icon {
-    background-image: url('../icons/default-button-icon.svg');
+  &__icon--pressed {
+    display: none;
+  }
+
+  &__icon--nonpressed {
+    display: unset;
   }
 
   &:active {
     background: #E3EDF7;
     box-shadow: inset 4px 4px 12px rgba(136, 165, 191, 0.4), inset -4px -4px 16px rgba(255, 255, 255, 0.8);
+  }
+
+  &:active &__icon--pressed {
+    display: unset;
+  }
+
+  &:active &__icon--nonpressed {
+    display: none;
   }
 }
