@@ -1,0 +1,60 @@
+.toggle {
+  width: 144px;
+  display: flex;
+  align-items: center;
+  background: hsl(212, 51%, 93%);
+  box-shadow: 0px 7px 16px rgba(104, 132, 157, 0.5), 0px -6px 24px #FFFFFF;
+  border-radius: 12px;
+  padding: 6px 7px;
+
+  &__status-field {
+    flex: 1 1;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: hsl(219, 37%, 30%);
+  }
+
+  &__switcher-field {
+    padding: 5px 7px;
+    background: hsl(211, 34%, 88%);
+    box-shadow: inset 2px 2px 6px rgba(105, 141, 173, 0.48), inset 1px 1px 2px rgba(105, 141, 173, 0.28), inset -3px -3px 8px rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  }
+
+  &__switcher {
+    height: 50px;
+    width: 64px;
+    background-size: cover;
+    background-image:
+        url('../icons/off-toggle-icon.svg'),
+        linear-gradient(90deg, #B5230F 22.63%, rgba(197, 37, 15, 0) 50%),
+        radial-gradient(18.87% 73% at 35.94% 55%, rgba(209, 32, 8, 0.7) 63.54%, rgba(187, 27, 6, 0) 100%),
+        linear-gradient(98.08deg, #DF5C4A -10.66%, #F71E00 119.6%);
+      background-blend-mode: overlay, normal, normal, normal;
+      box-shadow: 2px 2px 6px rgba(18, 46, 101, 0.26),
+                  -2px -2px 4px rgba(255, 255, 255, 0.3),
+                  inset -6px -2px 3px rgba(0, 0, 0, 0.2),
+                  inset 2px 0px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+
+    // &--off {
+
+    // }
+
+    // &--on {
+    //   background-image:
+    //     url(../icons/on-toggle-icon.svg),
+    //     linear-gradient(270deg, rgba(159, 32, 15, 0.7) 41.43%, rgba(197, 37, 15, 0) 63.28%),
+    //     radial-gradient(50.78% 65% at 57.03% 55%, rgba(209, 32, 8, 0.7) 63.54%, rgba(187, 27, 6, 0) 100%),
+    //     linear-gradient(257.81deg, #DF5C4A 8.6%, #F71E00 91.48%);
+    //   background-blend-mode: overlay, normal, normal, normal;
+    //   box-shadow: 2px -2px 6px rgba(18, 46, 101, 0.26),
+    //               -2px 2px 4px rgba(255, 255, 255, 0.3),
+    //               inset 6px -2px 3px rgba(0, 0, 0, 0.2),
+    //               inset 2px 0px 8px rgba(0, 0, 0, 0.3);
+    //   border-radius: 8px;
+    // }
+  }
+}
