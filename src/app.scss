@@ -1,11 +1,6 @@
-.app {
-  margin: 150px auto;
-  width: 600px;
-
-}
-
+@import './styles/variables.scss';
 body {
-  background-color: hsl(208, 60%, 95%);
+  background-color: var(--main-bgc);
 }
 
 * {
@@ -18,4 +13,10 @@ html {
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
+}
+
+.app {
+  margin: 150px auto;
+  width: 600px;
+
 }
