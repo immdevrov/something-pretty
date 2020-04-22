@@ -1,22 +1,29 @@
 .button {
   width: 56px;
   height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--button-bg);
   box-shadow: var(--button-shadow);
   border-radius: 16px;
   border: none;
 
-  &__icon--pressed {
-    display: none;
+  &__icon {
+    width: 26px;
+    height: 26px;
+    background-size: cover;
+    background-image: url('../icons/default-button-icon.svg');
   }
 
-  &__icon--nonpressed {
-    display: unset;
-  }
 
   &:active {
     background: var(--button-bg-active);
     box-shadow: var(--button-shadow-active);
+
+    .button__icon {
+      background-image: url('../icons/pressed-button-icon.svg');
+    }
   }
 
   &:active &__icon--pressed {
