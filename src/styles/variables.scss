@@ -1,9 +1,10 @@
 :root {
   --main-bgc: hsl(208, 60%, 95%);
   --light-bgc: hsl(211, 34%, 88%);
+  --main-text-color: hsl(219, 37%, 30%);
+  --main-border-color: hsl(218, 19%, 89%);
 
   --toggle-bgc: hsl(212, 51%, 93%);
-  --toggle-text: hsl(219, 37%, 30%);
   --toggle-box-shadow: 0px 7px 16px rgba(104, 132, 157, 0.5), 0px -6px 24px #FFFFFF;
   --toggle-switcher-field-box-shadow: inset 2px 2px 6px rgba(105, 141, 173, 0.48), inset 1px 1px 2px rgba(105, 141, 173, 0.28), inset -3px -3px 8px rgba(255, 255, 255, 0.5);
   --toggle-switcher-bg: linear-gradient(90deg, #B5230F 22.63%, rgba(197, 37, 15, 0) 50%),

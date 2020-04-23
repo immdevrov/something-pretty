@@ -1,12 +1,10 @@
 .button {
+  // main styles
   width: 56px;
   height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--button-bg);
-  box-shadow: var(--button-shadow);
-  border-radius: 16px;
   border: none;
 
   &__icon {
@@ -16,21 +14,24 @@
     background-image: url('../icons/default-button-icon.svg');
   }
 
-
   &:active {
-    background: var(--button-bg-active);
-    box-shadow: var(--button-shadow-active);
-
     .button__icon {
       background-image: url('../icons/pressed-button-icon.svg');
     }
   }
 
-  &:active &__icon--pressed {
-    display: unset;
+  // custom styles for types
+
+  &--curved {
+    background: var(--button-bg);
+    box-shadow: var(--button-shadow);
+    border-radius: 16px;
+
+    &:active {
+      background: var(--button-bg-active);
+      box-shadow: var(--button-shadow-active);
+    }
   }
 
-  &:active &__icon--nonpressed {
-    display: none;
-  }
+
 }

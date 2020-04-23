@@ -24,6 +24,7 @@
   "rules": {
       "semi": "error",
       "func-call-spacing": "error",
-      "space-before-function-paren": "error"
+      "space-before-function-paren": "error",
+      "react/prop-types": [0]
   }
 }
