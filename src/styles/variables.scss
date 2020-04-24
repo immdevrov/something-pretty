@@ -15,11 +15,32 @@
                     inset -6px -2px 3px rgba(0, 0, 0, 0.2),
                     inset 2px 0px 8px rgba(0, 0, 0, 0.3);
 
-  --button-bg:  radial-gradient(315.18% 315.18% at -124.11% -101.79%,
+
+  // button-curved
+  --button-bg--curved:  radial-gradient(315.18% 315.18% at -124.11% -101.79%,
               #B9CCE2 11.1%, #FFFFFF 85.21%), #E3EDF7;
-  --button-shadow:  4px 2px 16px rgba(136, 165, 191, 0.38),
+  --button-shadow--curved:  4px 2px 16px rgba(136, 165, 191, 0.38),
                     -4px -2px 16px rgba(255, 255, 255, 0.7);
-  --button-shadow-active: inset 4px 4px 12px rgba(136, 165, 191, 0.4),
+  --button-shadow-active--curved: inset 4px 4px 12px rgba(136, 165, 191, 0.4),
                           inset -4px -4px 16px rgba(255, 255, 255, 0.8);
-  --button-bg-active: hsl(210, 56%, 93%);
+  --button-bg-active--curved: hsl(210, 56%, 93%);
+  --button-br--curved: 16px;
+
+  // button-soft
+  --button-bg--soft: hsl(213, 44%, 95%);
+  --button-shadow--soft: 6px 4px 24px rgba(136, 165, 191, 0.36),
+                          -8px -4px 16px rgba(255, 255, 255, 0.7);
+  --button-bg-active--soft: radial-gradient(315.18% 315.18% at -124.11% -101.79%, #B9CCE2 11.1%, #FFFFFF 85.21%),
+                                #E3EDF7;
+  --button-shadow-active--soft: 6px 4px 24px rgba(136, 165, 191, 0.36), -8px -4px 16px rgba(255, 255, 255, 0.6);
+  --button-br--soft: 42px;
+
+  // button-flat
+  --button-bg--flat: hsl(213, 44%, 95%);
+  --button-shadow--flat: 4px 2px 16px rgba(136, 165, 191, 0.48),
+                        -4px -2px 16px #FFFFFF;
+  --button-bg-active--flat: hsl(210, 56%, 93%);
+  --button-shadow-active--flat: inset 3px 3px 7px rgba(136, 165, 191, 0.48),
+                                inset -3px -3px 7px #FFFFFF;
+  --button-br--flat: 16px;
 }

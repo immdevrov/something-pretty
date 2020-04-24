@@ -1,3 +1,14 @@
+@mixin button-by-type($type) {
+  background: var(--button-bg--#{$type});
+  box-shadow: var(--button-shadow--#{$type});
+  border-radius: var(--button-br--#{$type});
+
+  &:active {
+    background: var(--button-bg-active--#{$type});
+    box-shadow: var(--button-shadow-active--#{$type});
+  }
+}
+
 .button {
   // main styles
   width: 56px;
@@ -23,15 +34,14 @@
   // custom styles for types
 
   &--curved {
-    background: var(--button-bg);
-    box-shadow: var(--button-shadow);
-    border-radius: 16px;
-
-    &:active {
-      background: var(--button-bg-active);
-      box-shadow: var(--button-shadow-active);
-    }
+    @include button-by-type('curved');
   }
 
+  &--soft {
+    @include button-by-type('soft');
+  }
 
+  &--flat {
+    @include button-by-type('flat');
+  }
 }

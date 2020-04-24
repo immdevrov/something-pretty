@@ -22,10 +22,22 @@ function Layout () {
             </div>
           </div>
           <div className="elements">
+          <div className="elements__item">
+              <h3 className="elements__title">Buttons: flat</h3>
+              <div className="elements__el">
+                <Button type="flat"/>
+              </div>
+            </div>
             <div className="elements__item">
               <h3 className="elements__title">Buttons: curved</h3>
               <div className="elements__el">
                 <Button type="curved"/>
+              </div>
+            </div>
+            <div className="elements__item">
+              <h3 className="elements__title">Buttons: soft</h3>
+              <div className="elements__el">
+                <Button type="soft"/>
               </div>
             </div>
             <div className="elements__item">
