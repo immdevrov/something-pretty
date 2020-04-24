@@ -1,8 +1,9 @@
 import React from 'react';
 import './index.scss';
-import Button from './components/button.jsx';
+import Button from './components/button';
 import Toggle from './components/toggle';
 import logo from './icons/logo.svg';
+import Progress from './components/progress';
 
 function Layout () {
   return (
@@ -44,6 +45,12 @@ function Layout () {
               <h3 className="elements__title">Toggle</h3>
               <div className="elements__el">
                 <Toggle />
+              </div>
+            </div>
+            <div className="elements__item">
+              <h3 className="elements__title">Progress Bar</h3>
+              <div className="elements__el">
+                <Progress percent="12"/>
               </div>
             </div>
           </div>

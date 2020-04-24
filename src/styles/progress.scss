@@ -1,0 +1,18 @@
+.progress {
+  height: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--progress-bg);
+  box-shadow: var(--progress-shadow);
+  border-radius: 31px;
+
+  &__begunok {
+    height: 13px;
+    border-radius: 26px;
+    backdrop-filter: blur(28px);
+    background: var(--progress-begunok-bg);
+    box-shadow: var(--progress-begunok-shadow);
+    position: relative;
+  }
+}
