@@ -4,8 +4,42 @@ import Button from './components/button';
 import Toggle from './components/toggle';
 import logo from './icons/logo.svg';
 import Progress from './components/progress';
+import RenderComponents from './components/component-render';
 
 function Layout () {
+  const components = [
+    {
+      id: 0,
+      c: Button,
+      props: { type: 'flat'},
+      displayName: 'Button flat'
+    },
+    {
+      id: 1,
+      c: Button,
+      props: { type: 'curved'},
+      displayName: 'Button curved'
+    },
+    {
+      id: 2,
+      c: Button,
+      props: { type: 'soft'},
+      displayName: 'Button soft'
+    },
+    {
+      id: 3,
+      c: Toggle,
+      props: {},
+      displayName: 'Toggle'
+    },
+    {
+      id: 4,
+      c: Progress,
+      props: { percent: '35' },
+      displayName: 'Progress'
+    },
+  ];
+
   return (
     <div className="layout">
       <div className="container">
@@ -22,38 +56,7 @@ function Layout () {
               The main goal is to use a mix of familiar and analog elements in a minimalistic manner. Such effects achieved through utilizing gradients and shadows
             </div>
           </div>
-          <div className="elements">
-          <div className="elements__item">
-              <h3 className="elements__title">Buttons: flat</h3>
-              <div className="elements__el">
-                <Button type="flat"/>
-              </div>
-            </div>
-            <div className="elements__item">
-              <h3 className="elements__title">Buttons: curved</h3>
-              <div className="elements__el">
-                <Button type="curved"/>
-              </div>
-            </div>
-            <div className="elements__item">
-              <h3 className="elements__title">Buttons: soft</h3>
-              <div className="elements__el">
-                <Button type="soft"/>
-              </div>
-            </div>
-            <div className="elements__item">
-              <h3 className="elements__title">Toggle</h3>
-              <div className="elements__el">
-                <Toggle />
-              </div>
-            </div>
-            <div className="elements__item">
-              <h3 className="elements__title">Progress Bar</h3>
-              <div className="elements__el">
-                <Progress percent="12"/>
-              </div>
-            </div>
-          </div>
+          {RenderComponents({ components })}
         </main>
       </div>
     </div>
