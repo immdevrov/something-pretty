@@ -11,6 +11,7 @@ class Layout extends React.Component {
   constructor (props) {
     super(props);
     this.inputOnChange = this.inputOnChange.bind(this);
+    this.changeText = this.changeText.bind(this);
 
     this.state = {
       components: [
@@ -29,7 +30,10 @@ class Layout extends React.Component {
         {
           id: 2,
           c: Button,
-          props: { type: 'soft'},
+          props: {
+            type: 'soft',
+            onClick: this.changeText
+          },
           displayName: 'Button soft'
         },
         {
@@ -54,6 +58,7 @@ class Layout extends React.Component {
           displayName: 'Input'
         }
       ],
+      mainTitle: 'Elements'
     };
   }
 
@@ -65,10 +70,16 @@ class Layout extends React.Component {
     this.setState(state => ({
       components: state.components.map((c) => {
         if (this.isInput(c.id)) {
-          return { ...c, props: { ...c.props, value: value } };
+          return { ...c, props: { ...c.props, value } };
         }
         return { ...c };
       })
+    }));
+  }
+
+  changeText () {
+    this.setState(state => ({
+      mainTitle: state.components.find(c => this.isInput(c.id)).props.value
     }));
   }
 
@@ -84,12 +95,12 @@ class Layout extends React.Component {
           </header>
           <main className="main">
             <div className="main__title-block">
-              <h2 className="main__title">Elements</h2>
+              <h2 className="main__title">{this.state.mainTitle}</h2>
               <div className="main__description">
                 The main goal is to use a mix of familiar and analog elements in a minimalistic manner. Such effects achieved through utilizing gradients and shadows
               </div>
             </div>
-            {RenderComponents(this.state.components)}
+            { RenderComponents(this.state.components) }
           </main>
         </div>
       </div>

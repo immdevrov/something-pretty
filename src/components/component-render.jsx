@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function RenderComponents (components) {
   const componentsList = components.map(({ c, props, id, displayName }) =>
     <div className="elements__item" key={id}>
