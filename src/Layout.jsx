@@ -12,6 +12,7 @@ class Layout extends React.Component {
     super(props);
     this.inputOnChange = this.inputOnChange.bind(this);
     this.changeText = this.changeText.bind(this);
+    this.changeProgress = this.changeProgress.bind(this);
 
     this.state = {
       components: [
@@ -24,7 +25,10 @@ class Layout extends React.Component {
         {
           id: 1,
           c: Button,
-          props: { type: 'curved'},
+          props: {
+            type: 'curved',
+            onClick: this.changeProgress
+          },
           displayName: 'Button curved'
         },
         {
@@ -45,7 +49,7 @@ class Layout extends React.Component {
         {
           id: 4,
           c: Progress,
-          props: { percent: '35' },
+          props: { percent: '15' },
           displayName: 'Progress'
         },
         {
@@ -66,6 +70,10 @@ class Layout extends React.Component {
     return id === 5;
   }
 
+  isProgress (id) {
+    return id === 4;
+  }
+
   inputOnChange (value) {
     this.setState(state => ({
       components: state.components.map((c) => {
@@ -80,6 +88,17 @@ class Layout extends React.Component {
   changeText () {
     this.setState(state => ({
       mainTitle: state.components.find(c => this.isInput(c.id)).props.value
+    }));
+  }
+
+  changeProgress () {
+    this.setState(state => ({
+      components: state.components.map((c) => {
+        if (this.isProgress(c.id)) {
+          return { ...c, props: { ...c.props, percent: (c.props.percent + 15) % 100 } };
+        }
+        return { ...c };
+      })
     }));
   }
 
