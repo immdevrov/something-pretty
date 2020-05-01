@@ -22,12 +22,12 @@
     width: 26px;
     height: 26px;
     background-size: cover;
-    background-image: url('../icons/default-button-icon.svg');
+    background-image: var(--button-icon);
   }
 
   &:active {
     .button__icon {
-      background-image: url('../icons/pressed-button-icon.svg');
+      background-image: var(--button-icon-active)
     }
   }
 

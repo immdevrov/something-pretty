@@ -15,6 +15,9 @@ export default class Toggle extends React.Component {
     this.setState(state => ({
       toggled: !state.toggled
     }));
+    if (this.props && this.props.onClick && typeof this.props.onClick === 'function') {
+      this.props.onClick();
+    }
   }
 
   render () {

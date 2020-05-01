@@ -4,6 +4,7 @@ import '../styles/button.scss';
 export default function Button ({ type = 'flat', onClick}) {
   const handleClick = (e) => {
     e.preventDefault();
+    console.log(e);
     if (onClick && typeof onClick === 'function') {
       onClick();
     }

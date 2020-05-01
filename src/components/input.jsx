@@ -12,7 +12,7 @@ export default function Input ({ value, onChange }) {
       <input
         className="input"
         value={value}
-        onChange={e => handleChange(e)}
+        onChange={(e) => handleChange(e)}
       ></input>
     );
 }

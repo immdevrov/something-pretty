@@ -13,6 +13,7 @@ class Layout extends React.Component {
     this.inputOnChange = this.inputOnChange.bind(this);
     this.changeText = this.changeText.bind(this);
     this.changeProgress = this.changeProgress.bind(this);
+    this.changeColorMode = this.changeColorMode.bind(this);
 
     this.state = {
       components: [
@@ -43,7 +44,9 @@ class Layout extends React.Component {
         {
           id: 3,
           c: Toggle,
-          props: {},
+          props: {
+            onClick: this.changeColorMode
+          },
           displayName: 'Toggle'
         },
         {
@@ -62,7 +65,8 @@ class Layout extends React.Component {
           displayName: 'Input'
         }
       ],
-      mainTitle: 'Elements'
+      mainTitle: 'Elements',
+      darkMode: false
     };
   }
 
@@ -102,6 +106,17 @@ class Layout extends React.Component {
     }));
   }
 
+  async changeColorMode () {
+    await this.setState(state => ({
+      darkMode: !state.darkMode
+    }));
+    if (this.state.darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
   render () {
     return (
       <div className="layout">
@@ -110,7 +125,9 @@ class Layout extends React.Component {
             <div className="header__wrapper-logo">
               <img src={logo} alt="logo" className="logo"/>
             </div>
-            <h1 className="header__title">Light Version</h1>
+            <h1 className="header__title">
+              {this.state.darkMode ? 'Dark Version' : 'Light Version'}
+            </h1>
           </header>
           <main className="main">
             <div className="main__title-block">
