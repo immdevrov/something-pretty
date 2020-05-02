@@ -99,22 +99,22 @@ class Layout extends React.Component {
     this.setState(state => ({
       components: state.components.map((c) => {
         if (this.isProgress(c.id)) {
-          return { ...c, props: { ...c.props, percent: (c.props.percent + 15) % 100 } };
+          return { ...c, props: { ...c.props, percent: (+c.props.percent + 15) % 100 } };
         }
         return { ...c };
       })
     }));
   }
 
-  async changeColorMode () {
-    await this.setState(state => ({
+  changeColorMode () {
+    if (this.state.darkMode) {
+      document.body.classList.remove('dark-mode');
+    } else {
+      document.body.classList.add('dark-mode');
+    }
+    this.setState(state => ({
       darkMode: !state.darkMode
     }));
-    if (this.state.darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
   }
 
   render () {
