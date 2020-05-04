@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import './index.scss';
 import Button from './components/button';
@@ -14,13 +15,17 @@ class Layout extends React.Component {
     this.changeText = this.changeText.bind(this);
     this.changeProgress = this.changeProgress.bind(this);
     this.changeColorMode = this.changeColorMode.bind(this);
+    this.changeDescription = this.changeDescription.bind(this);
 
     this.state = {
       components: [
         {
           id: 0,
           c: Button,
-          props: { type: 'flat'},
+          props: {
+            type: 'flat',
+            onClick: this.changeDescription
+          },
           displayName: 'Button flat'
         },
         {
@@ -66,7 +71,9 @@ class Layout extends React.Component {
         }
       ],
       mainTitle: 'Elements',
-      darkMode: false
+      darkMode: false,
+      descriptionIsDefault: true
+
     };
   }
 
@@ -117,7 +124,23 @@ class Layout extends React.Component {
     }));
   }
 
+  changeDescription () {
+    this.setState(state => ({ descriptionIsDefault: !state.descriptionIsDefault }));
+  }
+
   render () {
+    const defalutDescription = 'The main goal is to use a mix of familiar and analog elements in a minimalistic manner. Such effects achieved through utilizing gradients and shadows';
+    const customDescription = (
+      <aside>
+        <p>
+          Design Neomorphism Guide 2.0 from <a target="_blank" href="https://www.figma.com/file/J1uPSOY5k577mDpSfGFven/Neomorphism-Guide-2.0-%7C-Original?node-id=26580%3A313">Figma</a>
+        </p>
+        <p>
+          <a target="_blank" href="https://github.com/immdevrov/something-pretty">Github Repo</a>
+        </p>
+      </aside>
+    );
+    const description = this.state.descriptionIsDefault ? defalutDescription : customDescription;
     return (
       <div className="layout">
         <div className="container">
@@ -133,7 +156,7 @@ class Layout extends React.Component {
             <div className="main__title-block">
               <h2 className="main__title">{this.state.mainTitle}</h2>
               <div className="main__description">
-                The main goal is to use a mix of familiar and analog elements in a minimalistic manner. Such effects achieved through utilizing gradients and shadows
+                {description}
               </div>
             </div>
             { RenderComponents(this.state.components) }
