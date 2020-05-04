@@ -87,8 +87,8 @@ button, input {
 .elements {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(3, min-content);
-  grid-column-gap: 20%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 20px;
 
   &__item {
     padding: 45px 0px;
