@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/something-pretty/static/css/main.999f36ea.chunk.css",
+    "main.js": "/something-pretty/static/js/main.bd7b9d3b.chunk.js",
+    "main.js.map": "/something-pretty/static/js/main.bd7b9d3b.chunk.js.map",
+    "runtime-main.js": "/something-pretty/static/js/runtime-main.23c6bb52.js",
+    "runtime-main.js.map": "/something-pretty/static/js/runtime-main.23c6bb52.js.map",
+    "static/js/2.b97a226e.chunk.js": "/something-pretty/static/js/2.b97a226e.chunk.js",
+    "static/js/2.b97a226e.chunk.js.map": "/something-pretty/static/js/2.b97a226e.chunk.js.map",
+    "index.html": "/something-pretty/index.html",
+    "precache-manifest.a14154b02f30987d3887bc887429bb5c.js": "/something-pretty/precache-manifest.a14154b02f30987d3887bc887429bb5c.js",
+    "service-worker.js": "/something-pretty/service-worker.js",
+    "static/css/main.999f36ea.chunk.css.map": "/something-pretty/static/css/main.999f36ea.chunk.css.map",
+    "static/js/2.b97a226e.chunk.js.LICENSE.txt": "/something-pretty/static/js/2.b97a226e.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/something-pretty/static/media/pressed-button-icon.a27b94a3.svg",
+    "static/media/logo.svg": "/something-pretty/static/media/logo.937d0924.svg",
+    "static/media/toggle.scss": "/something-pretty/static/media/off-toggle-icon.08771a8e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23c6bb52.js",
+    "static/js/2.b97a226e.chunk.js",
+    "static/css/main.999f36ea.chunk.css",
+    "static/js/main.bd7b9d3b.chunk.js"
+  ]
+}
